@@ -20,7 +20,7 @@ public class SnackDAO {
         List<Snack> listaSnacks = new ArrayList<>();
         String sql = null;
         try {
-            con = conexion.getCon();
+            con = conexion.conectar();
             ps = con.prepareStatement(sql);
             rs = ps.executeQuery();
             while(rs.next()){

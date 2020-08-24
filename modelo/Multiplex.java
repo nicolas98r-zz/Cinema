@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Multiplex {
     private String sede;
+    private int calificacion;
 
     public Multiplex() {
     }

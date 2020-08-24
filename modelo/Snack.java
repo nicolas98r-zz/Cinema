@@ -1,7 +1,7 @@
 package modelo;
 
 public class Snack {
-    private int id,precio;
+    private int id,precio, calificacion;
     private String nombre;
 
     public Snack() {

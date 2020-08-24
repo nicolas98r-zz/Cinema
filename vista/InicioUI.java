@@ -9,7 +9,8 @@ public class InicioUI extends JFrame{
     private JButton btn3;
     private JPanel menuPanel;
     private JPanel infoPanel;
-    private JLabel txtTitulo;
+    private JPanel logoPanel;
+    private JLabel logo;
 
     public InicioUI() {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -17,10 +18,6 @@ public class InicioUI extends JFrame{
         this.setResizable(false);
         this.setLocationRelativeTo(null);
         this.setContentPane(mainPanel);
-    }
-
-    public static void main(String[] args) {
-        JFrame f1 = new InicioUI();
-        f1.setVisible(true);
+        this.setTitle("Cine Distrito - Inicio");
     }
 }

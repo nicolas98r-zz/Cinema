@@ -16,11 +16,11 @@ public class MultiplexDAO {
     PreparedStatement ps;
     ResultSet rs;
 
-    public List consultarSnacks(){
+    public List consultarMultiplex(){
         List<Multiplex> listaMultiplex = new ArrayList<>();
-        String sql = "SELECT * FROM Multiplex";
+        String sql = "SELECT sede FROM Multiplex";
         try {
-            con = conexion.getCon();
+            con = conexion.conectar();
             ps = con.prepareStatement(sql);
             rs = ps.executeQuery();
             while(rs.next()){
