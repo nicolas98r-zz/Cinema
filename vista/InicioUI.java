@@ -1,7 +1,6 @@
 package vista;
 
 import javax.swing.*;
-import java.awt.*;
 
 public class InicioUI extends JFrame{
     private JPanel mainPanel;
