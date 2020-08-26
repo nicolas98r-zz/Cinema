@@ -1,6 +1,5 @@
 package controlDAO;
 
-import controlador.Conexion;
 import modelo.Snack;
 
 import java.sql.Connection;
@@ -16,9 +15,12 @@ public class SnackDAO {
     PreparedStatement ps;
     ResultSet rs;
 
-    public List consultarSnacks(){
+    public List consultarSnacks(String sede){
         List<Snack> listaSnacks = new ArrayList<>();
-        String sql = null;
+        String sql = "SELECT id, nombre, precio FROM Snacks " +
+                "JOIN Multiplex_Snacks ON Snacks.id = Multiplex_Snacks.id " +
+                "JOIN Multiplex ON Multiplex_Snacks.sede = Multiplex.sede" +
+                "WHERE Multiplex.sede = "+ sede;
         try {
             con = conexion.conectar();
             ps = con.prepareStatement(sql);
@@ -28,7 +30,9 @@ public class SnackDAO {
                 snack.setId(rs.getInt("id"));
                 snack.setNombre(rs.getString("nombre"));
                 snack.setPrecio(rs.getInt("precio"));
+                listaSnacks.add(snack);
             }
+            con = conexion.desconectar();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

@@ -1,6 +1,6 @@
 package vista;
 
-import controlador.Controlador;
+import controlador.ControlInicio;
 
 import javax.swing.*;
 
@@ -37,7 +37,7 @@ public class InicioUI extends JFrame{
 
     public static void main(String[] args) {
         InicioUI v1 = new InicioUI();
-        Controlador con = new Controlador(v1);
+        ControlInicio con = new ControlInicio(v1);
         v1.setVisible(true);
     }
 }

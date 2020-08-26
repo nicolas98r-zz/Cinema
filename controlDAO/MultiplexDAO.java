@@ -1,6 +1,5 @@
 package controlDAO;
 
-import controlador.Conexion;
 import modelo.Multiplex;
 
 import java.sql.Connection;

@@ -1,4 +1,4 @@
-package controlador;
+package controlDAO;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -14,7 +14,6 @@ public class Conexion {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(url,user,password);
-            System.out.println("Conectado");
         } catch (ClassNotFoundException e) {
             System.out.println("Error driver: "+e.getMessage());
         } catch (SQLException e){
@@ -25,7 +24,6 @@ public class Conexion {
 
     public Connection desconectar(){
         con = null;
-        System.out.println("Desconectado");
         return con;
     }
 }
