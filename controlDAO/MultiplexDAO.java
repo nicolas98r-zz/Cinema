@@ -26,7 +26,9 @@ public class MultiplexDAO {
             while(rs.next()){
                 Multiplex multiplex = new Multiplex();
                 multiplex.setSede(rs.getString("sede"));
+                listaMultiplex.add(multiplex);
             }
+            con = conexion.desconectar();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

@@ -1,5 +1,7 @@
 package vista;
 
+import controlador.Controlador;
+
 import javax.swing.*;
 
 public class InicioUI extends JFrame{
@@ -19,5 +21,23 @@ public class InicioUI extends JFrame{
         this.setLocationRelativeTo(null);
         this.setContentPane(mainPanel);
         this.setTitle("Cine Distrito - Inicio");
+    }
+
+    //Getters para el controlador
+    public JButton getBtn1() {
+        return btn1;
+    }
+    public JButton getBtn2() {
+        return btn2;
+    }
+    public JButton getBtn3() {
+        return btn3;
+    }
+
+
+    public static void main(String[] args) {
+        InicioUI v1 = new InicioUI();
+        Controlador con = new Controlador(v1);
+        v1.setVisible(true);
     }
 }

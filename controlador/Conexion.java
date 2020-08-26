@@ -23,12 +23,9 @@ public class Conexion {
         return con;
     }
 
-    public void desconectar(){
+    public Connection desconectar(){
         con = null;
-    }
-
-    public static void main(String[] args) {
-        Conexion con1 = new Conexion();
-        con1.conectar();
+        System.out.println("Desconectado");
+        return con;
     }
 }
